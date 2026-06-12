@@ -8,7 +8,8 @@ public class CollectionEffect : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Point"))
         {
-            points++;   
+            points++;
+            print("Points collected: " + points);
             AudioSource sound = other.GetComponent<AudioSource>();
             if (sound != null)
             {
