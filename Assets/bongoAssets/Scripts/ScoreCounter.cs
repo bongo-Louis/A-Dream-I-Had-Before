@@ -5,17 +5,21 @@ public class ScoreCounter : MonoBehaviour
 {
 	[SerializeField] private TextMeshProUGUI scoreText;
 	[SerializeField] private CollectionEffect collectionEffect;
+	private int totalPoints;
 
 	private void Start()
 	{
+		totalPoints = GameObject.FindGameObjectsWithTag("Point").Length;
+
 		if (collectionEffect == null)
 		{
-			GameObject player = GameObject.FindGameObjectWithTag("Player");
-			if (player != null)
+			collectionEffect = FindObjectOfType<CollectionEffect>();
+
+			if (collectionEffect == null)
 			{
-				collectionEffect = player.GetComponent<CollectionEffect>();
+				Debug.LogWarning("ScoreCounter could not find a CollectionEffect in the scene.");
 			}
-		}
+			}
 
 		UpdateScoreText();
 	}
@@ -33,6 +37,6 @@ public class ScoreCounter : MonoBehaviour
 		}
 
 		int points = collectionEffect != null ? collectionEffect.points : 0;
-		scoreText.text = "Points: " + points;
+		scoreText.text = "Points: " + points + " / " + totalPoints;
 	}
 }

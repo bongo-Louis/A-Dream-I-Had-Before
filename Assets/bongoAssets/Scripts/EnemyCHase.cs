@@ -9,8 +9,7 @@ public class EnemyChase : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        
-        // Finds the player by their tag. Make sure your Player object is tagged as "Player"!
+
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
