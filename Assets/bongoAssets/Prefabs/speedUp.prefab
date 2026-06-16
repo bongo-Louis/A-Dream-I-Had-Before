@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1759093376499006314
+--- !u!1 &749990418361270262
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6660403112893328606}
-  - component: {fileID: 2821716787556383743}
-  - component: {fileID: 7923198142834663086}
-  - component: {fileID: 395051466372235364}
-  - component: {fileID: 5595380019446157777}
-  - component: {fileID: 2786784767001622032}
+  - component: {fileID: 8580973976156163229}
+  - component: {fileID: 5011485348712151319}
+  - component: {fileID: 4445717926962770921}
+  - component: {fileID: 6296714076395266221}
+  - component: {fileID: 6937743342977850314}
+  - component: {fileID: 5278303055926293924}
   m_Layer: 0
-  m_Name: normalPoint
-  m_TagString: Point
+  m_Name: speedUp
+  m_TagString: Speed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!4 &6660403112893328606
+--- !u!4 &8580973976156163229
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759093376499006314}
+  m_GameObject: {fileID: 749990418361270262}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.34222, y: 1.07, z: 2.14632}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.780001, y: 0.406, z: 6.959999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 727917087808714232}
+  - {fileID: 5028493969094829271}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &2821716787556383743
+--- !u!135 &5011485348712151319
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759093376499006314}
+  m_GameObject: {fileID: 749990418361270262}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -58,13 +58,13 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &7923198142834663086
+--- !u!54 &4445717926962770921
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759093376499006314}
+  m_GameObject: {fileID: 749990418361270262}
   serializedVersion: 5
   m_Mass: 1
   m_LinearDamping: 0
@@ -85,13 +85,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!82 &395051466372235364
+--- !u!82 &6296714076395266221
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759093376499006314}
+  m_GameObject: {fileID: 749990418361270262}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -106,7 +106,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.74157345
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -182,14 +182,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!212 &5595380019446157777
+--- !u!212 &6937743342977850314
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759093376499006314}
+  m_GameObject: {fileID: 749990418361270262}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -231,7 +231,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: fceed73ef9cb6854fb405e7fcb87ca1b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 029a34effb3ae9e4a9d57ba5dcd3c956, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -241,20 +241,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &2786784767001622032
+--- !u!114 &5278303055926293924
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759093376499006314}
+  m_GameObject: {fileID: 749990418361270262}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9553f4a737b8cf94782927f2439003f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BillboardEffect
   playerTransform: {fileID: 0}
---- !u!1 &9125023499003830761
+--- !u!1 &3983426238498139366
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,9 +262,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 727917087808714232}
-  - component: {fileID: 9100289745579865863}
-  - component: {fileID: 3094208382778486292}
+  - component: {fileID: 5028493969094829271}
+  - component: {fileID: 7462578636993361523}
+  - component: {fileID: 6757621646550500262}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -272,32 +272,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!4 &727917087808714232
+--- !u!4 &5028493969094829271
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9125023499003830761}
+  m_GameObject: {fileID: 3983426238498139366}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6660403112893328606}
+  m_Father: {fileID: 8580973976156163229}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &9100289745579865863
+--- !u!108 &7462578636993361523
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9125023499003830761}
+  m_GameObject: {fileID: 3983426238498139366}
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 2
-  m_Color: {r: 0.7001232, g: 1, b: 0.5990566, a: 1}
+  m_Color: {r: 0.6, g: 1, b: 0.9890375, a: 1}
   m_Intensity: 2
   m_Range: 1.33
   m_SpotAngle: 30
@@ -352,13 +352,13 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!114 &3094208382778486292
+--- !u!114 &6757621646550500262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9125023499003830761}
+  m_GameObject: {fileID: 3983426238498139366}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}

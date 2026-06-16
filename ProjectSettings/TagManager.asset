@@ -8,6 +8,7 @@ TagManager:
   - Point
   - Speed
   - Hurt
+  - Win
   layers:
   - Default
   - TransparentFX

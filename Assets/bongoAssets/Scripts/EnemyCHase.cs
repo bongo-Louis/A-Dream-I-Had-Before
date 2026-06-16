@@ -5,6 +5,7 @@ using UnityEngine.AI;
 public class EnemyCHase : MonoBehaviour
 {
     private NavMeshAgent agent;
+    private CollectionEffect collectionEffect;
     [SerializeField] private Transform playerTransform;
 
     private void Awake()
@@ -14,6 +15,7 @@ public class EnemyCHase : MonoBehaviour
 
     private void Start()
     {
+        collectionEffect = FindObjectOfType<CollectionEffect>();
         TryFindPlayer();
     }
 
@@ -44,5 +46,10 @@ public class EnemyCHase : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
             playerTransform = player.transform;
+    }
+    public void SpeedUp()
+    {
+        agent.speed += 0.025f;
+        print("Enemy speed increased! Current speed: " + agent.speed);
     }
 }

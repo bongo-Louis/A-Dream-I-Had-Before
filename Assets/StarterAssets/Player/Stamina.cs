@@ -44,6 +44,11 @@ namespace StarterAssets
             return CurrentStamina > 0f;
         }
 
+        public void AddStamina(float amount)
+        {
+            CurrentStamina = Mathf.Clamp(CurrentStamina + amount, 0f, MaxStamina);
+        }
+
         private void Update()
         {
             if (_requestedSprint && CurrentStamina > 0f)

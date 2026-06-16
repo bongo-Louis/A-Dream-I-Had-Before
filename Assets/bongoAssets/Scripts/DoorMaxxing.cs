@@ -21,12 +21,22 @@ public class DoorMaxxing : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    private void PlayExplodeAudio(GameObject pickup)
+    {
+        AudioSource sound = pickup.GetComponent<AudioSource>();
+        if (sound != null && sound.clip != null)
+        {
+            AudioSource.PlayClipAtPoint(sound.clip, pickup.transform.position);
+        }
+    }
     void Update()
     {
         // check if the player has collected all the points in the scene by comparing it with the "points" variable from collectioneffect
         if (collectionEffect != null && collectionEffect.points >= totalPoints)
         {
             // if the player has collected all the points, destroy the door
+            PlayExplodeAudio(gameObject);
             Destroy(gameObject);
             print("All points collected! Door destroyed.");
         }
