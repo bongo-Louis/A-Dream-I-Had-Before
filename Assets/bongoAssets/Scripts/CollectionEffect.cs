@@ -33,7 +33,7 @@ public class CollectionEffect : MonoBehaviour
         {
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(10f);
+                playerHealth.TakeDamage(playerHealth.GetMaxHealth());
                 Destroy(other.gameObject);
             }
         }

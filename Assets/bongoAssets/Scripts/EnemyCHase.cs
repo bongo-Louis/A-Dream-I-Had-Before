@@ -1,28 +1,48 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyChase : MonoBehaviour
+[RequireComponent(typeof(NavMeshAgent))]
+public class EnemyCHase : MonoBehaviour
 {
     private NavMeshAgent agent;
-    private Transform playerTransform;
+    [SerializeField] private Transform playerTransform;
 
-    void Start()
+    private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+    }
+
+    private void Start()
+    {
+        TryFindPlayer();
+    }
+
+    private void Update()
+    {
+        if (playerTransform == null)
+        {
+            TryFindPlayer();
+            return;
+        }
+
+        if (agent.isOnNavMesh)
+            agent.SetDestination(playerTransform.position);
+    }
+
+    private void TryFindPlayer()
+    {
+        if (playerTransform != null)
+            return;
+
+        Health playerHealth = FindObjectOfType<Health>();
+        if (playerHealth != null)
+        {
+            playerTransform = playerHealth.transform;
+            return;
+        }
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
-        {
             playerTransform = player.transform;
-        }
-    }
-
-    void Update()
-    {
-        // If the player exists, update the destination every frame
-        if (playerTransform != null)
-        {
-            agent.SetDestination(playerTransform.position);
-        }
     }
 }
