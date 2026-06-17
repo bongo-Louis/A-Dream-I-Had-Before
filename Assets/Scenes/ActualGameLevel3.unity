@@ -8374,7 +8374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8012929066046074365, guid: 5f0cf84914db2c24f96a2a4b3ed0028d, type: 3}
       propertyPath: blastForce
-      value: 15
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 8012929066046074365, guid: 5f0cf84914db2c24f96a2a4b3ed0028d, type: 3}
       propertyPath: blastRange
