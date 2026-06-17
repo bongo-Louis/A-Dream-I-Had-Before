@@ -19,10 +19,10 @@ Windows pc, with at least
 
 ## credits
 ### music
-The Chase - toby fox
-ATRIUM - toby fox
-coin sfx - driken5482
-TV Static - voicemod
+- The Chase - toby fox
+- ATRIUM - toby fox
+- coin sfx - driken5482
+- TV Static - voicemod
 
 ### code references
 github copilot
