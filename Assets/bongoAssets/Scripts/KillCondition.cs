@@ -1,3 +1,8 @@
+/*
+* Author: louis hoe zheng sheng
+* Description: hurt script for the enemy
+*/
+
 using UnityEngine;
 
 public class KillCondition : MonoBehaviour

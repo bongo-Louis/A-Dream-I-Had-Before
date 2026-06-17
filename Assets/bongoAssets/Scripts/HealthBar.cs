@@ -1,3 +1,8 @@
+/*
+* Author: louis hoe zheng sheng
+* Description: health bar ui
+*/
+
 using UnityEngine;
 using UnityEngine.UI;
 

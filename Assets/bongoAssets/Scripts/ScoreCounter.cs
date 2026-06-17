@@ -1,3 +1,8 @@
+/*
+* Author: louis hoe zheng sheng
+* Description: ui script to count the points collected and display it on the ui
+*/
+
 using UnityEngine;
 using TMPro;
 

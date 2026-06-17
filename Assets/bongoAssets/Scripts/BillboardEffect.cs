@@ -1,3 +1,8 @@
+/*
+* Author: louis hoe zheng sheng
+* Description: make sprite face user
+*/
+
 using UnityEngine;
 
 public class BillboardEffect : MonoBehaviour

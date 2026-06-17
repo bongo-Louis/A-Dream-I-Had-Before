@@ -1,3 +1,8 @@
+/*
+* Author: louis hoe zheng sheng
+* Description: simple script to lock cursor again when in game again
+*/
+
 using UnityEngine;
 
 public class Player3DInit : MonoBehaviour

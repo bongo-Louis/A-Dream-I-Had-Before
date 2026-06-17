@@ -1,3 +1,8 @@
+/*
+* Author: louis hoe zheng sheng
+* Description: enemy ai chase logic very simple
+*/
+
 using UnityEngine;
 using UnityEngine.AI;
 

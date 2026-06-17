@@ -1,3 +1,8 @@
+/*
+* Author: louis hoe zheng sheng
+* Description: door script
+*/
+
 using UnityEngine;
 
 public class DoorMaxxing : MonoBehaviour

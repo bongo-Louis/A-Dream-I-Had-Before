@@ -1,19 +1,19 @@
 /*
 * Author: louis hoe zheng sheng
-* Description: win condition for the game, when the player enters the trigger, it will load the win scene
+* Description: teleporter from the tutorial
 */
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class winCondition : MonoBehaviour
+public class startCondition : MonoBehaviour
 {
     // Update is called once per frame
 private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Win");
+            SceneManager.LoadScene("ActualGameLevel3");
         }
     }
 }

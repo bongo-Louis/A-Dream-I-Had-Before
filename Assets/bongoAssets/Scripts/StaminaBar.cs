@@ -1,3 +1,8 @@
+/*
+* Author: louis hoe zheng sheng
+* Description: ui script to display the stamina bar on the ui and update it based on the player's stamina
+*/
+
 using UnityEngine;
 using UnityEngine.UI;
 using StarterAssets;

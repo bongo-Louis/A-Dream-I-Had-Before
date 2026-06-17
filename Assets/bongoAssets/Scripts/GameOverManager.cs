@@ -1,3 +1,8 @@
+/*
+* Author: louis hoe zheng sheng
+* Description: simple script to handle gameover logic in the gameover scene
+*/
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

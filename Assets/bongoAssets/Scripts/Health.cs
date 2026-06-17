@@ -1,3 +1,8 @@
+/*
+* Author: louis hoe zheng sheng
+* Description: health system
+*/
+
 using UnityEngine;
 
 public class Health : MonoBehaviour

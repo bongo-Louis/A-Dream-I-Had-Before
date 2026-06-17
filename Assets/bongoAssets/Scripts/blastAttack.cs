@@ -1,3 +1,8 @@
+/*
+* Author: louis hoe zheng sheng
+* Description: blast attack logic
+*/
+
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;

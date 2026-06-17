@@ -1,3 +1,8 @@
+/*
+* Author: louis hoe zheng sheng
+* Description: simple script to point towards the nearest object with a specified tag, used for the point and speed pickups in the game. The arrow will only show if the pickup is within a certain distance, and will point towards the pickup even if it's off-screen.
+*/
+
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,3 +1,8 @@
+/*
+* Author: louis hoe zheng sheng
+* Description: main script that handles collection of stuff
+*/
+
 using UnityEngine;
 using StarterAssets;
 
@@ -42,7 +47,14 @@ public class CollectionEffect : MonoBehaviour
         {
             points++;
             print("Points collected: " + points);
-            enemyChase.SpeedUp();
+            if (enemyChase != null)
+            {
+                enemyChase.SpeedUp();
+            }
+            else
+            {
+                print("Warning: Cannot speed up enemy because EnemyCHase was not found.");
+            }
             PlayPickupAudio(other.gameObject);
             Destroy(other.gameObject);
         }
