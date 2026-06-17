@@ -7,11 +7,13 @@ public class CollectionEffect : MonoBehaviour
     private Health playerHealth;
     private Stamina stamina;
     private EnemyCHase enemyChase;
+    private blastAttack blastAttack;
 
     private void Start()
     {
         playerHealth = GetComponent<Health>();
         stamina = GetComponent<Stamina>();
+        blastAttack = GetComponent<blastAttack>();
         enemyChase = FindObjectOfType<EnemyCHase>();
 
         if (playerHealth == null)
@@ -28,6 +30,10 @@ public class CollectionEffect : MonoBehaviour
         {
             print("Warning: EnemyCHase component not found in the scene!");
         }
+        if (blastAttack == null)
+        {
+            print("Warning: blastAttack component not found on Player!");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -41,17 +47,6 @@ public class CollectionEffect : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        else if (other.gameObject.CompareTag("Hurt"))
-        {
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(playerHealth.GetMaxHealth());
-            }
-
-            PlayPickupAudio(other.gameObject);
-            Destroy(other.gameObject);
-        }
-
         else if (other.gameObject.CompareTag("Speed"))
         {
             if (stamina != null)
@@ -59,6 +54,21 @@ public class CollectionEffect : MonoBehaviour
                 float staminaBefore = stamina.CurrentStamina;
                 stamina.AddStamina(stamina.MaxStamina * 0.2f);
                 print($"Stamina pickup: {staminaBefore} -> {stamina.CurrentStamina} / {stamina.MaxStamina}");
+            }
+
+            PlayPickupAudio(other.gameObject);
+            Destroy(other.gameObject);
+        }
+
+        else if (other.gameObject.CompareTag("Attack"))
+        {
+            if (blastAttack != null)
+            {
+                blastAttack.addLightCharge();
+            }
+            else
+            {
+                print("Warning: Cannot collect Attack pickup because blastAttack is missing.");
             }
 
             PlayPickupAudio(other.gameObject);
